@@ -12,9 +12,9 @@ import Post from './store/PostContext';
 
 function App() {
 
-  const { setUser } = useContext(AuthContext)
-  const { firebase } = useContext(FirebaseContext)
-
+  const { setUser } = useContext(AuthContext);
+  const { firebase } = useContext(FirebaseContext);
+  //useEffect
   useEffect(() => {  
     const auth = firebase.firebaseAuth.getAuth();
     firebase.firebaseAuth.onAuthStateChanged(auth, (user) => {
